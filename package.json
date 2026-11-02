@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-scroll-animation",
+  "version": "1.0.0",
+  "description": "Smooth scroll-based video frame animation",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "canvas",
+    "scroll-animation",
+    "frame-by-frame"
+  ],
+  "author": "",
+  "license": "ISC"
+}

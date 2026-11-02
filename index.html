@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Richa | MERN Stack Developer</title>
+  
+  <!-- Modern Clean Typography: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="progress-bar-container">
+    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-spinner"></div>
+    <div class="loader-bar-bg">
+      <div id="loader-bar-fill" class="loader-bar-fill"></div>
+    </div>
+    <div class="loader-text"><span id="loader-percentage">0%</span></div>
+  </div>
+
+  <!-- Fixed Fullscreen Background Video Canvas -->
+  <div class="canvas-container">
+    <canvas id="animation-canvas"></canvas>
+    <!-- Cinematic Lighting Overlays ensuring high contrast and zero text collisions -->
+    <div class="canvas-overlay"></div>
+  </div>
+
+  <!-- Fixed Sticky Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo-badge" aria-label="Richa Home">R.</a>
+      
+      <!-- Desktop Pill Navbar -->
+      <nav class="nav-pill desktop-nav">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-talk desktop-only">Let's Talk</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-menu-drawer" class="mobile-menu-drawer">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-nav-links">
+          <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+          <li><a href="#services" class="mobile-nav-link">Services</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+          <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-drawer-actions">
+          <a href="Richa_CV.pdf" download="Richa_CV.pdf" class="btn-download-cv">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span>Download CV</span>
+          </a>
+          <a href="#contact" class="btn-talk mobile-talk-btn">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Scrollable Content -->
+  <main class="content-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <p class="hero-greeting">Hi, I'm Richa</p>
+        <h1 class="hero-title">
+          <span>MERN Stack</span>
+          <span>Developer</span>
+        </h1>
+        <p class="hero-desc">
+          Computer Science undergraduate with hands-on experience in full-stack MERN development, AI-powered applications, autonomous workflows (MCP), and secure REST APIs.
+        </p>
+
+        <div class="hero-actions">
+          <a href="Richa_CV.pdf" download="Richa_CV.pdf" class="btn-download-cv">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span>Download CV</span>
+          </a>
+          <a href="#contact" class="btn-outline">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.93 0 1.69-.76 1.69-1.69a1.69 1.69 0 0 0-1.69-1.68 1.69 1.69 0 0 0-1.68 1.68c0 .93.75 1.69 1.68 1.69m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+          <!-- LeetCode -->
+          <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LeetCode" title="LeetCode">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.247 2.198 5.864 2.177 8.082-.047l5.965-5.965a1.495 1.495 0 0 0 0-2.115 1.495 1.495 0 0 0-2.115 0l-5.965 5.965a2.85 2.85 0 0 1-4.025.023l-4.28-4.2a2.98 2.98 0 0 1-.645-.921 2.83 2.83 0 0 1-.168-.487 2.775 2.775 0 0 1-.031-1.182c.045-.29.13-.57.253-.833a2.72 2.72 0 0 1 .616-1.077l3.854-4.126 5.406-5.788A1.375 1.375 0 0 0 13.483 0zm-2.88 7.218a1.417 1.417 0 0 0-1.002.418L3.636 13.6a1.417 1.417 0 1 0 2.004 2.004l5.965-5.964a1.417 1.417 0 0 0-1.002-2.422z"/>
+            </svg>
+          </a>
+          <!-- Email Direct -->
+          <a href="mailto:rc7903645770@gmail.com" class="social-icon" aria-label="Email" title="rc7903645770@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator Hint -->
+      <div id="scroll-hint" class="scroll-hint">
+        <div class="scroll-hint-icon">
+          <div class="scroll-hint-wheel"></div>
+        </div>
+        <span class="scroll-hint-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- SERVICES / WHAT I DO SECTION -->
+    <section id="services" class="section services-section">
+      <div class="section-header">
+        <h2 class="section-title">Services &amp; Expertise</h2>
+        <p class="section-subtitle">Architecting modern full-stack web applications &amp; autonomous AI solutions</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="glass-card service-card">
+          <h3 class="service-title">MERN Full-Stack<br>Development</h3>
+          <p class="service-desc">End-to-end responsive web applications with React 18, Vite, Node.js, Express, and MongoDB with clean component architecture.</p>
+          <div class="pill-group">
+            <span class="outline-pill">React.js &amp; Tailwind CSS</span>
+            <span class="outline-pill">Node.js &amp; Express APIs</span>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="glass-card service-card">
+          <h3 class="service-title">AI &amp; Agent<br>Integration</h3>
+          <p class="service-desc">Autonomous AI workflows, custom tool calling with Model Context Protocol (MCP), Groq AI, and Google Gemini API integration.</p>
+          <div class="pill-group">
+            <span class="outline-pill">Groq &amp; Gemini APIs</span>
+            <span class="outline-pill">MCP Autonomous Agents</span>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="glass-card service-card">
+          <h3 class="service-title">REST APIs &amp;<br>Authentication</h3>
+          <p class="service-desc">Secure backend architectures featuring JWT tokens, Google OAuth 2.0, Firebase Auth, protected routes, and session history management.</p>
+          <div class="pill-group">
+            <span class="outline-pill">JWT &amp; Firebase Auth</span>
+            <span class="outline-pill">Secure Route Protection</span>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="glass-card service-card">
+          <h3 class="service-title">Database &amp; Query<br>Optimization</h3>
+          <p class="service-desc">Efficient MongoDB/Mongoose schemas and optimized SQL queries to reduce latency, boost performance, and withstand high-traffic loads.</p>
+          <div class="pill-group">
+            <span class="outline-pill">MongoDB &amp; Mongoose</span>
+            <span class="outline-pill">SQL Query Optimization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-summary">
+          I'm a Computer Science undergraduate at Rungta College of Engineering &amp; Technology (CGPA: 8.32) with practical experience in MERN stack engineering, autonomous AI systems, and database optimization. Passionate about turning complex logic into seamless, high-performance web products backed by solid foundations in Data Structures &amp; Algorithms, OOP, and system design.
+        </p>
+      </div>
+
+      <div class="approach-wrapper">
+        <h3 class="approach-title">My Engineering Approach</h3>
+        <div class="approach-grid">
+          <div class="approach-card">
+            <span class="approach-badge">01</span>
+            <span class="approach-label">Problem Solving &amp; Data Structures</span>
+          </div>
+          <div class="approach-card">
+            <span class="approach-badge">02</span>
+            <span class="approach-label">Scalable MERN Full-Stack Architecture</span>
+          </div>
+          <div class="approach-card">
+            <span class="approach-badge">03</span>
+            <span class="approach-label">Autonomous AI &amp; Tool-Calling Workflows</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">Active</span>
+          <span class="stat-label">LeetCode Problem Solver</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">8.32</span>
+          <span class="stat-label">B.Tech CSE CGPA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">Finalist</span>
+          <span class="stat-label">National Hackathons &amp; Contests</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Core languages, frameworks, AI integrations, and database technologies</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skill Card 1 -->
+        <div class="glass-card skill-card">
+          <h3 class="skill-category">Languages</h3>
+          <div class="tag-cloud">
+            <span class="tag-pill">JavaScript (ES6+)</span>
+            <span class="tag-pill">TypeScript</span>
+            <span class="tag-pill">Java</span>
+            <span class="tag-pill">Python</span>
+            <span class="tag-pill">SQL</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="glass-card skill-card">
+          <h3 class="skill-category">Frameworks &amp; Libraries</h3>
+          <div class="tag-cloud">
+            <span class="tag-pill">React.js 18</span>
+            <span class="tag-pill">Node.js</span>
+            <span class="tag-pill">Express.js</span>
+            <span class="tag-pill">Tailwind CSS</span>
+            <span class="tag-pill">Axios</span>
+            <span class="tag-pill">Vite</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="glass-card skill-card">
+          <h3 class="skill-category">AI &amp; APIs</h3>
+          <div class="tag-cloud">
+            <span class="tag-pill">Groq AI</span>
+            <span class="tag-pill">Gemini API</span>
+            <span class="tag-pill">Model Context Protocol (MCP)</span>
+            <span class="tag-pill">RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 4 -->
+        <div class="glass-card skill-card">
+          <h3 class="skill-category">Databases, Auth &amp; Tools</h3>
+          <div class="tag-cloud">
+            <span class="tag-pill">MongoDB &amp; Mongoose</span>
+            <span class="tag-pill">JWT</span>
+            <span class="tag-pill">Firebase Auth</span>
+            <span class="tag-pill">Google OAuth 2.0</span>
+            <span class="tag-pill">Git / GitHub</span>
+            <span class="tag-pill">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world full-stack MERN &amp; autonomous AI applications</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: AI Debugger Assistant -->
+        <div class="glass-card project-card featured">
+          <div class="project-header">
+            <span class="project-badge">2026 • AI &amp; MERN Stack</span>
+          </div>
+          <h3 class="project-title">AI Debugger Assistant</h3>
+          <p class="project-subtitle">React.js, Node.js, Express.js, MongoDB, Groq AI, MCP, Firebase</p>
+          <p class="project-desc">
+            Built an autonomous debugging assistant that inspects, analyzes, and fixes code errors using Groq AI and MCP-based tool calling. Features custom tools for file listing, code search, automated code modification, ZIP project upload, JWT authentication, Google OAuth 2.0 with Firebase, and interactive Markdown rendering.
+          </p>
+          <div class="tag-cloud">
+            <span class="tag-pill">Groq AI</span>
+            <span class="tag-pill">MCP Tools</span>
+            <span class="tag-pill">React 18 + Vite</span>
+            <span class="tag-pill">Express REST APIs</span>
+            <span class="tag-pill">MongoDB</span>
+            <span class="tag-pill">JWT &amp; Firebase</span>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Mentor -->
+        <div class="glass-card project-card">
+          <div class="project-header">
+            <span class="project-badge">2025 • AI Platform</span>
+          </div>
+          <h3 class="project-title">AI Mentor</h3>
+          <p class="project-subtitle">React.js, Google Gemini API, Tailwind CSS</p>
+          <p class="project-desc">
+            An AI-powered mentoring platform providing personalized learning and career guidance through a conversational, component-based UI. Integrated Gemini API via client-side calls for real-time AI responses to learning path queries with fully responsive modular components.
+          </p>
+          <div class="tag-cloud">
+            <span class="tag-pill">Gemini API</span>
+            <span class="tag-pill">React.js</span>
+            <span class="tag-pill">Tailwind CSS</span>
+            <span class="tag-pill">Conversational UI</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Mantrix Guidance Platform -->
+        <div class="glass-card project-card">
+          <div class="project-header">
+            <span class="project-badge">2025 • SIH National Finalist</span>
+          </div>
+          <h3 class="project-title">Mantrix Career Guidance</h3>
+          <p class="project-subtitle">Full-Stack Educational Platform • SIH 2025</p>
+          <p class="project-desc">
+            Developed Mantrix, an end-to-end career and educational guidance web platform selected as a National Finalist at Smart India Hackathon (SIH) 2025, helping students navigate customized career journeys and mentorship paths.
+          </p>
+          <div class="tag-cloud">
+            <span class="tag-pill">Smart India Hackathon</span>
+            <span class="tag-pill">Full-Stack</span>
+            <span class="tag-pill">Career Tech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & ACHIEVEMENTS SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="section-header">
+        <h2 class="section-title">Experience &amp; Achievements</h2>
+        <p class="section-subtitle">Internships, hackathon podium finishes, and verified credentials</p>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Internship Experience -->
+        <div class="glass-card exp-card">
+          <div class="exp-badge">Jul 2025 – Oct 2025 • Remote</div>
+          <h3 class="exp-role">Web Developer Intern</h3>
+          <p class="exp-company">Bharat Economic Forum</p>
+          <ul class="exp-bullets">
+            <li>Worked on web development requirements for projects and initiatives associated with the <strong>Viksit Bharat Mission@2047</strong>.</li>
+            <li>Contributed to website development, reviewed web interfaces, and fixed UI inconsistencies to improve user experience.</li>
+            <li>Supported debugging and quality improvements across interactive web components.</li>
+            <li>Optimized SQL queries to improve database response times and reduce load during high-traffic scenarios.</li>
+          </ul>
+        </div>
+
+        <!-- Achievements & Certifications -->
+        <div class="glass-card exp-card">
+          <div class="exp-badge">Honors &amp; Credentials</div>
+          <h3 class="exp-role">Hackathons &amp; Certifications</h3>
+          <div class="achieve-list">
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>Finalist — Smart India Hackathon (SIH) 2025</strong>
+                <p>Developed Mantrix, a career and education guidance platform.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>Runner-Up — Google Gemini Hackathon</strong>
+                <p>Built an intelligent web application powered by Google Gemini API.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>2nd Position — "Break The Pattern" Hackathon</strong>
+                <p>BIT Mesra competitive national hackathon.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>3rd Position — Semester 4 Project Competition</strong>
+                <p>Rungta College of Engineering &amp; Technology project showcase.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>Champion Tier — Google Cloud Arcade 2025</strong>
+                <p>Cloud infrastructure &amp; architectural milestone.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>Open Source Connect Global</strong>
+                <p>Collaborated on real-world open-source repositories and codebases.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>NPTEL Java Certification — Elite + Gold (92%)</strong>
+                <p>National Programme on Technology Enhanced Learning.</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <span class="achieve-dot"></span>
+              <div>
+                <strong>MERN Full Stack Development — Coding Spoon</strong>
+                <p>Certified in full-stack web architecture &amp; deployment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="glass-card contact-box">
+        <h2 class="contact-title">Let's build something impactful together</h2>
+        <p class="contact-desc">
+          I'm open to full-stack MERN developer roles, AI integration projects, and collaborative engineering opportunities. Feel free to connect!
+        </p>
+
+        <!-- Direct Contact Details Grid -->
+        <div class="contact-details-grid">
+          <a href="mailto:rc7903645770@gmail.com" class="contact-info-pill">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>rc7903645770@gmail.com</span>
+          </a>
+
+          <a href="tel:+916206521772" class="contact-info-pill">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+91-6206521772</span>
+          </a>
+
+          <div class="contact-info-pill non-clickable">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Bhilai, Chhattisgarh • CSVTU (CGPA: 8.32)</span>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:rc7903645770@gmail.com" class="btn-talk btn-large">
+            Send an Email
+          </a>
+          <a href="Richa_CV.pdf" download="Richa_CV.pdf" class="btn-download-cv btn-large">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            <span>Download Full CV</span>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Richa. All rights reserved. • MERN Stack Developer</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
